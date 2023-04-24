@@ -1,7 +1,8 @@
 package cmd
 
 import (
-	"todo/server"
+	"todo/server/grpc"
+	"todo/server/http"
 
 	"github.com/spf13/cobra"
 )
@@ -22,7 +23,7 @@ func newHttpServerCmd() *cobra.Command {
 		Use:   "http",
 		Short: "start http server",
 		Run: func(cmd *cobra.Command, args []string) {
-			server.StartHttp()
+			http.StartServer()
 		},
 	}
 }
@@ -32,7 +33,7 @@ func newGrpcServerCmd() *cobra.Command {
 		Use:   "grpc",
 		Short: "start grpc server",
 		Run: func(cmd *cobra.Command, args []string) {
-			server.StartGRPC()
+			grpc.StartServer()
 		},
 	}
 }

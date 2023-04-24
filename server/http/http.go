@@ -1,4 +1,4 @@
-package server
+package http
 
 import (
 	"net/http"
@@ -6,7 +6,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func StartHttp() {
+func StartServer() {
 
 	h := mux.NewRouter()
 
