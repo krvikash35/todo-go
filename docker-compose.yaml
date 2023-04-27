@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  todo-http-server:
+    build: .
+    command: http
+    ports:
+      - 8081:8081
+  todo-grpc-server:
+    build: .
+    command: grpc
+    ports:
+      - 8082:8082
